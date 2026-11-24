@@ -8,7 +8,7 @@ Give your agent image and video generation, with architectural design tools for 
 
 You can give this instruction to an agent that can run commands on your computer.
 
-> Install the 3D Room Design plugin for my current DeepSeek Harness profile using this README. Connect my 3dr account, let me approve access in the browser, restart the profile and verify that you can quote one interior image. Stop after the quote.
+> Install the 3D Room Design plugin for my current DeepSeek Harness profile using the instructions at https://github.com/3droomdesign/dsh-plugin-3dr. Connect my 3dr account, let me approve access in the browser, restart the profile and verify that you can quote one interior image. Stop after the quote.
 
 1. On the computer that runs DSH, install [Node.js](https://nodejs.org/) 22 or later (with npm) and [Git](https://git-scm.com/downloads). In a terminal, install the official CLI and authorize your account in the browser. An existing 3dr connection on the same site and profile can be reused.
 

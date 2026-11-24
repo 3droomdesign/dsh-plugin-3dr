@@ -8,7 +8,7 @@
 
 将这句话发给能在您电脑执行命令的 Agent 即可开始。
 
-> 按这份 README 给我当前使用的 DeepSeek Harness 安装 3D Room Design 插件，连接我的 3dr 账号。需要授权时打开官网让我确认，重启对应的 DSH 配置，然后用一张室内效果图的报价检查连接。拿到报价就结束。
+> 请按照 https://github.com/3droomdesign/dsh-plugin-3dr 的说明，给我当前使用的 DeepSeek Harness 安装 3D Room Design 插件，连接我的 3dr 账号。需要授权时打开官网让我确认，重启对应的 DSH 配置，然后用一张室内效果图的报价检查连接。拿到报价就结束。
 
 1. 在运行 DSH 的电脑准备好 [Node.js](https://nodejs.org/) 22 或更高版本、npm 和 [Git](https://git-scm.com/downloads)。在终端安装官方 3dr，按提示在浏览器授权。已有同站点、同一 3dr profile 授权的用户可以直接复用。
 

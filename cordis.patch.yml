@@ -1,0 +1,27 @@
+- insert:
+    - id: mcp-3dr
+      name: '@deepseek-ai/dsh-mcp-client'
+      config: !!js |
+        (() => {
+          const dir = ctx.profileContext.dir;
+          const path = process.getBuiltinModule('node:path');
+          const fromProfile = process.getBuiltinModule('node:module').createRequire(path.join(dir, 'package.json'));
+          const relay = fromProfile.resolve('dsh-plugin-3dr/stdio');
+          const file = path.join(dir, '3dr-mcp.json');
+          const fs = process.getBuiltinModule('node:fs');
+          let launch = { command: '3dr', args: ['serve'] };
+          if (fs.existsSync(file)) {
+            launch = JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, '')).mcpServers?.['3dr'];
+            if (!launch?.command || !Array.isArray(launch.args)) {
+              throw new Error('Regenerate 3dr-mcp.json with 3dr config.');
+            }
+          }
+          const origin = launch.env?.THREEDR_SITE_ORIGIN || process.env.THREEDR_SITE_ORIGIN;
+          return {
+            serverName: '3dr', transport: 'stdio',
+            command: process.execPath, args: [relay, launch.command, ...launch.args],
+            env: { ...(process.versions.electron ? { ELECTRON_RUN_AS_NODE: '1' } : {}),
+                   ...(origin ? { THREEDR_SITE_ORIGIN: origin } : {}) },
+            failOnStartupError: false
+          };
+        })()

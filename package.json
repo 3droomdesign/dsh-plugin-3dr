@@ -1,0 +1,13 @@
+{
+  "name": "dsh-plugin-3dr",
+  "version": "0.1.0",
+  "description": "Give your agent image and video generation, with architectural design tools for interiors, exteriors, and floor plans.",
+  "keywords": ["dsh-plugin", "deepseek-harness", "mcp", "image-generation", "video-generation", "architecture"],
+  "homepage": "https://github.com/3droomdesign/dsh-plugin-3dr",
+  "repository": { "type": "git", "url": "git+https://github.com/3droomdesign/dsh-plugin-3dr.git" },
+  "author": "3D Room Design",
+  "license": "SEE LICENSE IN LICENSE",
+  "exports": { "./stdio": "./stdio.mjs", "./locale/*.json": "./locale/*.json", "./icon": "./icon.svg" },
+  "files": ["stdio.mjs", "cordis.patch.yml", "locale/*.json", "icon.svg", "README.zh-CN.md"],
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } }
+}

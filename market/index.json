@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "title": {
+    "en": "3D Room Design plugins",
+    "zh": "3D Room Design 插件"
+  },
+  "plugins": [
+    {
+      "name": "dsh-plugin-3dr",
+      "title": {
+        "en": "3D Room Design",
+        "zh": "3D Room Design"
+      },
+      "description": {
+        "en": "Give your agent image and video generation, with architectural design tools for interiors, exteriors, and floor plans.",
+        "zh": "为您的 Agent 增加生图和视频生成能力，擅长室内外建筑效果图与户型可视化。"
+      },
+      "icon": "../icon.svg",
+      "author": "3D Room Design",
+      "homepage": "https://github.com/3droomdesign/dsh-plugin-3dr",
+      "repository": {
+        "url": "https://github.com/3droomdesign/dsh-plugin-3dr"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1795509921,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/3droomdesign/dsh-plugin-3dr",
+            "commit": "caa0722a4d9be1d2901b9c2d5b8835b641531bcd"
+          }
+        }
+      ]
+    }
+  ]
+}
